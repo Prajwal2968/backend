@@ -2,11 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "backend/api/index.js",
+      "src": "server.js", // Or whatever your main backend entry file is
       "use": "@vercel/node"
     }
   ],
-  "routes": [
-    { "src": "/api/(.*)", "dest": "backend/api/index.js" }
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/server.js" // All requests will be routed to server.js
+    }
   ]
 }
