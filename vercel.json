@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "server.js", // Or whatever your main backend entry file is
+      "src": "server.js", 
       "use": "@vercel/node"
     }
   ],
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/server.js" // All requests will be routed to server.js
+      "destination": "/server.js" 
     }
   ]
 }
